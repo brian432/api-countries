@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.App, body, header, html {
+  min-width: 20rem;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 5rem;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header button {
+  border: none;
+  background: transparent;
+  width: 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+main {
+  padding: 2rem 5rem;
+  background: #fafafa;
+  margin-top: 4.5rem;
+  min-height: 100vh;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+main form #search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 25rem;
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  background: white;
+}
+
+main form #search button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 1.875rem;
+  margin-right: .625rem;
+}
+
+main form #search button i {
+  color: #858585;
+}
+
+main form #search input {
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+main form select {
+  background: white;
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  font-weight: 700;
+}
+
+main form select option {
+  font-weight: 700;
+}
+
+#paises {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(18.75rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+#paises .cuadros-paises {
+  background: white;
+  border-radius: .625rem;
+  max-width: 18.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#paises .datos {
+  padding: 20px;
+  line-height: 2;
+}
+
+#paises .datos h1 {
+  font-size: 1.5rem;
+}
+
+.div-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18.75rem;
+  height: 12.5rem;
+}
+
+.div-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+  border: none;
+  background: white;
+  border-radius: .3125rem;
+  width: 5.625rem;
+  padding: .625rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.cuadro-pais {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5rem;
+}
+
+.cuadro-pais .div-img-alone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 31.25rem;
+  height: 18.75rem;
+  margin-right: 3rem;
+}
+
+.cuadro-pais .div-img-alone img {
+  width: 100%;
+  height: 100%;
+}
+
+.cuadro-pais .datos-alone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 5rem;
+          column-gap: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2;
+}
+
+.cuadro-pais .datos-alone h1 {
+  margin-bottom: 1rem;
+}
+
+.span {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.span span {
+  padding: .3125rem .625rem;
+  background: white;
+  border-radius: .3125rem;
+  margin-left: .3125rem;
+}
+
+/*funciones clases*/
+.boxShadow {
+  box-shadow: 0px 0px 20px 0px rgba(226, 226, 226, 0.75);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(226, 226, 226, 0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(226, 226, 226, 0.75);
+}
+
+.noche {
+  background: #111517;
+}
+
+.noche2 {
+  background: #202c37 !important;
+  color: white;
+}
+
+.colorNigth {
+  color: white !important;
+}
+
+@media (max-width: 910px) {
+  .div-img-alone {
+    margin-right: 0 !important;
+  }
+  .cuadro-pais {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cuadro-pais .datos-alone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 780px) {
+  header {
+    padding: 1rem 1rem;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
+  main {
+    padding: 1rem 1rem !important;
+    margin-top: 3.2rem;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  form select {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito+Sans:wght@300;600;800&display=swap');
+
+$Dark-Blue: hsl(209, 23%, 22%);
+$Very-Dark1: hsl(207, 26%, 17%);
+$Very-Dark2: hsl(200, 15%, 8%);
+$Dark-Gray: hsl(0, 0%, 52%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+
+// Body Copy
+
+$Homepage-Items: 14px;
+$Detail-Page: 16px; 
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+.App, body, header, html{
+    min-width:20rem;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    background: $White;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    button{
+        border: none;
+        background: transparent;
+        width: 5.625rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 700;
+    }
+}
+main{
+    padding: 2rem 5rem;
+    background: $Very-Light-Gray;
+    margin-top: 4.5rem;
+    min-height: 100vh;
+    form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        #search{
+            display: flex;
+            max-width: 25rem;
+            padding: .625rem 1.25rem;
+            border-radius: .3125rem;
+            background: $White;
+            button{
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                width: 1.875rem;
+                margin-right: .625rem;
+                i{
+                    color: $Dark-Gray;
+                }
+            }
+            input{
+                border:0;
+                background:none;
+                outline:none;
+            }
+        }
+        select{
+            background: $White;
+            padding: .625rem 1.25rem;
+            border-radius: .3125rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari and Chrome */
+            appearance:none;
+            font-weight: 700;
+            option{
+                font-weight: 700;
+            }
+        }  
+    }
+}
+#paises{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    justify-content: space-between;
+    align-items:center ;
+    gap: 1.25rem;
+    .cuadros-paises{
+        background: $White;
+        border-radius: .625rem;
+        max-width: 18.75rem;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+    .datos{
+        padding: 20px;
+        line-height: 2;
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.div-img{
+    display: flex;
+    width: 18.75rem;
+    height: 12.5rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.back{
+    border:none;
+    background: $White;
+    border-radius: .3125rem;
+    width: 5.625rem;
+    padding: .625rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cuadro-pais{
+    display: flex;
+    margin-top :5rem;
+    .div-img-alone{
+        display: flex;
+        max-width: 31.25rem;
+        height: 18.75rem;
+        margin-right: 3rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .datos-alone{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 2;
+        h1{
+            margin-bottom: 1rem;
+        }
+    }
+}
+.span{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    span{
+        padding: .3125rem .625rem;
+        background: $White;
+        border-radius: .3125rem;
+        margin-left: .3125rem;
+    }
+}
+/*funciones clases*/
+.boxShadow{
+    box-shadow: 0px 0px 20px 0px rgba(226,226,226,0.75);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(226,226,226,0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(226,226,226,0.75);
+}
+.noche{
+    background: $Very-Dark2;
+}
+.noche2{
+    background: $Very-Dark1!important;
+    color: $White;
+}
+.colorNigth{
+    color:$White!important;
+}
+
+@media (max-width:910px){
+    .div-img-alone{
+        margin-right: 0!important;
+    }
+    .cuadro-pais {
+        display: flex;
+        flex-direction: column;
+        .datos-alone{
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+        }
+    }
+}
+
+
+@media (max-width:780px){
+    header {
+        padding: 1rem 1rem;
+        h1{
+            font-size: 1rem;
+        }
+    }   
+    main{
+        padding: 1rem 1rem!important;
+        margin-top: 3.2rem;
+    }
+    form{
+        flex-direction: column;
+        align-items: flex-start!important;
+        select{
+            margin-top: 2rem;
+        }
+    }
+}
