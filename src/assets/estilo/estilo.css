@@ -263,6 +263,7 @@ main form select option {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 0;
   }
   .cuadro-pais .datos-alone {
     display: -webkit-box;
